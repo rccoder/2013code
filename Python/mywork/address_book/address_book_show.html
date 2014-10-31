@@ -1,0 +1,34 @@
+﻿<tr>
+<br><br><br>
+<th><strong><tt><h1 align="center"></tt></strong></th>Address Book List
+</tr>
+<table border=1 align="center">
+ <tr>
+<br><br>
+</tr> 
+<form action="/search_people/" method="post">
+<b>Please input the name what you'll search：</b>
+<input name="name" type="text"><input type="submit" value="searching">
+</form></div>
+<tr>
+<br><br>
+<th>ID</th><th>name</th><th>sex</th><th>birthday</th><th>phone</th><th>qq</th><th>Email</th><th>address</th>
+ </tr>
+{% for people in people_list %}
+ <tr>
+  <td>{{ people.sm }}</td>
+  <td>{{ people.name }}</td>
+  <td>{% if people.sex %} Man {% else %} Woman {% endif %}</td>
+  <td>{{ people.birthday }}</td>
+  <td>{{ people.phone }}</td>
+  <td>{{ people.qq }}</td>
+  <td>{{ people.email }}</td>
+  <td>{{ people.address }}</td>
+  <td><a href="/delete_people/?id={{people.id}}">Delete</a></td>
+  <td><a href="/change_people_list/?id={{people.id}}">Change</a></td>
+ </tr>
+{% endfor %}
+</table>
+<tr>
+<a href="/addr_book">return to add a new people</a>
+</tr>

@@ -1,0 +1,20 @@
+﻿<form method="post">
+<table border=1 align="center">
+<div align="center"><h1>Change the information of the address book</h1></div>
+ <tr>
+<th>ID</th><th>name</th><th>sex</th><th>birthday</th><th>phone</th><th>qq</th><th>Email</th><th>Address</th>
+ </tr>
+ <tr>
+  <td><input name = "sm"value="{{new_people.sm}}"type="text"></td>
+  <td><input name="name" value="{{ new_people.name }}" type="text"></td> 
+    <td><input name = "sex"value="{{new_people.sex}}" type="radio"value =                                   "M">Man<input name = "sex" value="{{new_people.sex}}"type="radio"value =                  "F">Woman</td>
+  <td><input name="birthday" value="{{ new_people.birthday }} "type="text"></td>
+  <td><input name="phone" value="{{ new_people.phone }}" type="text"></td>
+  <td><input name="qq" value="{{ new_people.qq }}" type="text"></td>
+  <td><input name="email" value="{{ new_people.email }}" type="text"></td>
+  <td><input name="address" value="{{ new_people.address }}" type="text"></td>  
+  <td><input type="submit" value="save"> <input type="reset" value="refill"></td>
+ </tr>
+</table>
+<div align="center"><a href="/people_list/">return</a></div>
+</form>
